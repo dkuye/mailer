@@ -57,10 +57,6 @@ func Send(templateData Template) error {
 
 	d := gomail.NewDialer(host, port, username, password)
 	d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
-	// Send the email to Bob, Cora and Dan.
-	/*if err := d.DialAndSend(m); err != nil {
-		fmt.Println(err)
-	}*/
 
 	err := d.DialAndSend(m)
 
